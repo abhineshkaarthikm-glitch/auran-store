@@ -14,7 +14,7 @@ function OrderTracking() {
   async function fetchOrder(currentOrderId, currentMobile) {
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/api/orders/track?order_id=${encodeURIComponent(
+        `http://https://auran-backend.onrender.com/api/orders/track?order_id=${encodeURIComponent(
           currentOrderId
         )}&mobile=${encodeURIComponent(currentMobile)}`
       );

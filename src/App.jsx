@@ -34,7 +34,7 @@ function App() {
   const [loadingProducts, setLoadingProducts] = useState(true);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/api/products")
+    fetch("http://https://auran-backend.onrender.com/api/products")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to load products");
@@ -85,7 +85,7 @@ function App() {
     }
 
     if (image.startsWith("/uploads/")) {
-      return `http://127.0.0.1:5000${image}`;
+      return `http://https://auran-backend.onrender.com${image}`;
     }
 
     if (image.startsWith("/")) {
@@ -1216,7 +1216,7 @@ function App() {
             setShowCheckout(false);
             setCart([]);
 
-            fetch("http://127.0.0.1:5000/api/products")
+            fetch("http://https://auran-backend.onrender.com/api/products")
               .then((response) => response.json())
               .then((data) => {
                 setProducts(data);

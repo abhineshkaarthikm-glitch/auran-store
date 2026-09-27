@@ -145,7 +145,7 @@ function Admin() {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:5000/api/orders"
+        "http://https://auran-backend.onrender.com/api/orders"
       );
 
       if (!response.ok) {
@@ -179,7 +179,7 @@ function Admin() {
       });
 
       const response = await fetch(
-        `http://127.0.0.1:5000/api/orders/${order.id}/items`
+        `http://https://auran-backend.onrender.com/api/orders/${order.id}/items`
       );
 
       if (!response.ok) {
@@ -259,7 +259,7 @@ function Admin() {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/api/orders/${orderId}/status`,
+        `http://https://auran-backend.onrender.com/api/orders/${orderId}/status`,
         {
           method: "PUT",
 
@@ -327,7 +327,7 @@ function Admin() {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:5000/api/products"
+        "http://https://auran-backend.onrender.com/api/products"
       );
 
       if (!response.ok) {
@@ -447,7 +447,7 @@ function Admin() {
     );
 
     const response = await fetch(
-      "http://127.0.0.1:5000/api/upload-image",
+      "http://https://auran-backend.onrender.com/api/upload-image",
       {
         method: "POST",
         body: formData,
@@ -503,7 +503,7 @@ function Admin() {
 
       if (editingProduct) {
         response = await fetch(
-          `http://127.0.0.1:5000/api/products/${editingProduct.id}`,
+          `http://https://auran-backend.onrender.com/api/products/${editingProduct.id}`,
           {
             method: "PUT",
 
@@ -541,7 +541,7 @@ function Admin() {
 
       else {
         response = await fetch(
-          "http://127.0.0.1:5000/api/products",
+          "http://https://auran-backend.onrender.com/api/products",
           {
             method: "POST",
 
@@ -627,7 +627,7 @@ function Admin() {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/api/products/${productId}`,
+        `http://https://auran-backend.onrender.com/api/products/${productId}`,
         {
           method: "DELETE",
         }
